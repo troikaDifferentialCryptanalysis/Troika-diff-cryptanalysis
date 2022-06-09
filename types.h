@@ -1,5 +1,6 @@
 /* types.h */
-
+#ifndef TYPES_H
+#define TYPES_H 
 /*
 
 This code uses functions and ideas from KeccakTools
@@ -8,9 +9,6 @@ and XooTools (https://github.com/KeccakTeam/Xoodoo/tree/master/XooTools/Sources)
 We thank Silvia Mella and Gilles Van Assche for their intelligible code. 
 
 */
-
-#ifndef TYPES_H
-#define TYPES_H 
 
 #include <iostream>
 #include <assert.h>

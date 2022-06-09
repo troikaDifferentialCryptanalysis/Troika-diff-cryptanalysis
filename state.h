@@ -1,6 +1,18 @@
 /* state.h */ 
 #ifndef STATE_H
 #define STATE_H
+/*
+
+This code uses functions and ideas from KeccakTools
+(https://github.com/KeccakTeam/KeccakTools/tree/master/Sources)
+and XooTools (https://github.com/KeccakTeam/Xoodoo/tree/master/XooTools/Sources). 
+We thank Silvia Mella and Gilles Van Assche for their intelligible code. 
+
+The classes of this file are used to manipulate the different parts of 
+the state of Troika. 
+
+*/
+
 
 #include <iostream>
 #include <iomanip>

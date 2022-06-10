@@ -2,6 +2,15 @@
 #include "state.h"
 #include "sbox.h"
 
+static const int SHIFT_ROWS_PARAM[3] = {0, 1, 2};
+                                    
+static const int SHIFT_LANES_PARAM[27] =
+/*     x=0   x=1   x=2   x=3   x=4   x=5   x=6   x=7   x=8       */
+      {19   ,13   ,21   ,10   ,24   ,15   ,2    ,9    ,3    , // y=0
+       14   ,0    ,6    ,5    ,1    ,25   ,22   ,23   ,20   , // y=1
+       7    ,17   ,26   ,12   ,8    ,18   ,16   ,11   ,4  };  // y=2
+
+
 ostream & operator << (ostream& fout, const ColumnPosition& aCP)
 {
     fout << "(" << dec << aCP.x << ",-," << setw(2) << aCP.z << ") "; 
@@ -579,14 +588,6 @@ ostream & operator << (ostream &fout, const TroikaPlane &aPlane)
     }
     return fout; 
 }
-
-static const int SHIFT_ROWS_PARAM[3] = {0, 1, 2};
-                                    
-static const int SHIFT_LANES_PARAM[27] =
-/*     x=0   x=1   x=2   x=3   x=4   x=5   x=6   x=7   x=8       */
-      {19   ,13   ,21   ,10   ,24   ,15   ,2    ,9    ,3    , // y=0
-       14   ,0    ,6    ,5    ,1    ,25   ,22   ,23   ,20   , // y=1
-       7    ,17   ,26   ,12   ,8    ,18   ,16   ,11   ,4  };  // y=2
 
 void TroikaState::setEmptyState()
 {

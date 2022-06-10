@@ -11,7 +11,7 @@
   This file contains the classes used to extend a trail core in the backward
   direction(see Appendix C.2). For a backward extension (A, B), used to extend
   a trail core (C, ...), the state B is chosen active tryte by active tryte.
-  All the trytes of a slice of B must be chosen before chosing the trytes of 
+  All the trytes of a slice of B must be chosen before choosing the trytes of 
   another slice. The weight of the extension is computed while choosing the slices. 
 */
 
